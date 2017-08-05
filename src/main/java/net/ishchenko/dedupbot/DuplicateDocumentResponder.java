@@ -34,7 +34,7 @@ public class DuplicateDocumentResponder implements Function<Update, Stream<SendM
         }
         if (oldUpdate != null) {
             String text = String.format(
-                    "Эта картинка уже была, постил @%s в %s",
+                    "Было! @%s в %s",
                     oldUpdate.message().from().username(),
                     formatter.format(Instant.ofEpochSecond(oldUpdate.message().date()).atZone(ZoneId.systemDefault()))
             );
